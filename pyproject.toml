@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "kidney-stone-prediction"
+version = "0.1.0"
+description = "This is kidney stone prediction app"
+authors = ["Jai Shankar K S <jai.shankar@hingehealth.com>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+scikit-learn = "1.1.3"
+flask = "^3.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,17 @@
+# This docker-compose file is only intended for local development.
+version: "3"
+services:
+  service:
+    # Run a specific tag of a service image with the command: `TAG=<new-tag> docker-compose up`
+    image: 'kindney-stone-prediction:latest'
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_APP=app.py
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: flask run --host=0.0.0.0 --port=5000 --reload
+  
